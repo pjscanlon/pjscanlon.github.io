@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - Improving Recruitment Strategies in NHANES</title>
+  <title>Portfolio Details - SANDS</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -83,11 +83,11 @@
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">National Health and Nutrition Examination Survey (NHANES)</h1>
+        <h1 class="mb-2 mb-lg-0">Semi-Automated Non-response Detection for Surveys</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">NHANES Recruitment</li>
+            <li class="current">SANDS</li>
           </ol>
         </nav>
       </div>
@@ -145,49 +145,61 @@
         <div class="row justify-content-between gy-4 mt-4">
 
           <div class="col-lg-8" data-aos="fade-up">
-            <h1>Improving Recruitment Strategies in the National Health and Nutrition Examination Survey (NHANES)</h1>
-            <p>Recruiting respondents for large-scale federal surveys has become increasingly challenging, and the <strong>National Health and Nutrition Examination Survey (NHANES)</strong>—the gold standard in national health examination surveys—is no exception. While its response rates remain comparatively high, the complexity of NHANES’ <strong>multi-stage data collection process</strong> (household screening, in-home interview, and offsite medical examination) presents unique obstacles to participation. Recognizing the need for a deeper understanding of these challenges, I led a project to gather insights directly from NHANES <strong>Field Interviewers (FIs) and Study Managers (SMs)</strong>. Through a series of structured <strong>focus group discussions</strong>, we examined <strong>barriers to recruitment, management inefficiencies, and opportunities for improvement</strong>, leading to concrete recommendations for increasing response efficiency while maintaining data quality.</p>
-    
-            <h2>Goals</h2>
-            <ul>
-                <li>Investigate declining response rates in NHANES and identify barriers field staff face when recruiting sampled respondents into the study.</li>
-                <li>Assess how program management, survey materials, and communication between headquarters and field teams impact recruitment efficiency.</li>
-                <li>Develop data-driven recommendations to improve response efficiency while maintaining NHANES' role as the gold standard in health examination surveys.</li>
-            </ul>
-            
-            <h2>Challenges</h2>
-            <ul>
-                <li>NHANES' <strong>multi-stage data collection</strong> makes participation more burdensome than in typical surveys.</li>
-                <li>Field staff face <strong>increasing respondent resistance</strong>, including anti-government sentiment and refusal patterns that vary by demographics.</li>
-                <li>The decentralized <strong>case assignment process</strong> led to concerns about <strong>inconsistent management, lack of transparency, and communication gaps</strong> between headquarters, field offices, and interviewers.</li>
-            </ul>
-            
-            <h2>Methods and Tools</h2>
-            <ul>
-                <li>Conducted and coordinated <strong>three focus group discussions</strong> with <strong>26 Field Interviewers (FIs) and 3 Study Managers (SMs)</strong>.</li>
-                <li>Used <strong>free-listing techniques</strong> to analyze field staff perspectives on job challenges and rewards, identifying the most salient themes.</li>
-                <li>Applied <strong>qualitative analysis</strong> to pinpoint key <strong>barriers to recruitment</strong> and <strong>management inefficiencies</strong> affecting field operations.</li>
-            </ul>
-            
-            <h2>Outcomes</h2>
-            <ul>
-                <li><strong>Communication & Scheduling Improvements:</strong> Findings led to recommendations for <strong>standardizing case assignments</strong>, ensuring all interviewers receive assignments at the same time via a centralized process.</li>
-                <li><strong>Management Consistency:</strong> Proposed <strong>uniform training, mentoring programs, and quality control procedures</strong> to reduce variation across field offices.</li>
-                <li><strong>Survey Incentives & Logistics:</strong> Suggested changes to the interview staff <strong>incentive structure</strong>, reducing competition among interviewers and recognizing contributions across different survey phases.</li>
-                <li><strong>Questionnaire Refinements:</strong> Recommended simplifying the NHANES <strong>survey instrument</strong> to reduce respondent burden and improve data quality.</li>
-                <li><strong>Media & Public Awareness:</strong> Identified the need for <strong>stronger media outreach before case assignments begin</strong> to build trust and increase cooperation rates.</li>
-            </ul>
+            <h1>SANDS—Semi-Automated Non-response Detection for Surveys</h1>
+            <p>Surveys, administrative records, and web scraping generate massive amounts of free-text responses, many of which require manual review to distinguish between valid responses and item non-response (e.g., "don’t know," "skip," or blank text). I led a team that developed SANDS (Semi-Automated Nonresponse Detection for Survey Text), a machine learning model designed to automate this review process, significantly reducing the need for manual coding.</p>
+
+<p>SANDS, the CDC’s first publicly released machine learning model, significantly reduces human effort in data cleaning and analysis, making it easier to process qualitative and text data from sources such as survey responses, hospital notes, and Electronic Health Records (EHRs). By leveraging natural language processing (NLP) and supervised learning, this model improves efficiency in handling large-scale qualitative datasets.</p>
+
+<h2>Goals</h2>
+<ul>
+    <li>Develop a machine learning model that can automatically classify text responses as either valid data or item non-response.</li>
+    <li>Reduce manual effort and subjectivity in cleaning large-scale qualitative datasets.</li>
+    <li>Ensure the model is transparent, explainable, and publicly available for research use.</li>
+    <li>Evaluate the model across national surveys, health records, and administrative datasets to improve data quality and analysis efficiency.</li>
+</ul>
+
+<h2>Challenges</h2>
+<ul>
+    <li>Handling highly imbalanced data, as explicit blanks or missing responses are rare. Instead, non-response is context-dependent, requiring consideration of both the data source and analytical goals to classify text accurately.</li>
+    <li>Ensuring high accuracy and generalizability across different types of surveys and records.</li>
+    <li>Addressing ethical and transparency concerns by developing a clear model card and public documentation.</li>
+    <li>Gaining approval for public release as CDC’s first openly available ML model.</li>
+</ul>
+
+<h2>Methods</h2>
+<ul>
+    <li>Natural Language Processing (NLP): Fine-tuned a pre-trained BERT language model for response classification, optimizing it to distinguish between valid responses and item non-response.</li>
+    <li>Supervised Learning: Labeled datasets were used to train a binary classifier that distinguishes valid responses from nonresponses.</li>
+    <li>Feature Engineering: Incorporated both semantic meaning (via embeddings) and text structure patterns to improve classification accuracy.</li>
+    <li>Model Evaluation: Conducted rigorous accuracy testing, bias detection, and generalization analysis across multiple datasets.</li>
+</ul>
+
+<h2>Outcomes & Impact</h2>
+<ul>
+    <li>Released and deployed SANDS, now publicly available on Hugging Face, marking CDC’s first machine learning model release.</li>
+    <li>Demonstrated a high accuracy rate in detecting item non-response, significantly reducing manual coding effort.</li>
+    <li>Improved the efficiency of survey processing, administrative records analysis, and health data research.</li>
+    <li>Enabled greater scalability and reproducibility for government and academic researchers working with large qualitative datasets.</li>
+</ul>
+
+<h2>Publications & Resources</h2>
+<ul>
+    <li><a href="https://huggingface.co/NCHS/SANDS" target="_blank">Model Card</a></li>
+    <li>Journal Article:
+      <ul>
+          <li><a href="https://journals.sagepub.com/doi/abs/10.1177/08944393241249720" target="_blank">Cibelli Hibben, K., Smith, Z., Rogers, B., Ryan, V., Scanlon, P., & Hoppe, T. 2025. "Semi-Automated Nonresponse Detection for Open-Text Survey Data." <em>Social Science Computer Review</em>, 43(1), 166-190.</a></li>
+</ul>
           </div>
 
           <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong> Survey</li>
-                <li><strong>Sponsor</strong> National Center for Health Statistics </li>
+                <li><strong>Category</strong> Questionnaire</li>
+                <li><strong>Sponsor</strong> National Center for Immunization and Respiratory Diseases, National Immunization Surveys </li>
                 <!-- <li><strong>Project date</strong> 01 March, 2020</li> -->
-                <li><strong>Project URL</strong> <a href="https://www.cdc.gov/nchs/nhanes/index.html" target="_blank">https://www.cdc.gov/nchs/nhanes/index.html</a></li>
-                <li><a href="https://www.cdc.gov/nchs/nhanes/index.html" class="btn-visit align-self-start" target="_blank">Visit Website</a></li>
+                <li><strong>Project URL</strong> <a href="https://www.cdc.gov/nchs/data-analysis-tools/sands.html" target="_blank">https://www.cdc.gov/nchs/data-analysis-tools/sands.html</a></li>
+                <li><a href="https://www.cdc.gov/nchs/data-analysis-tools/sands.html" class="btn-visit align-self-start" target="_blank">Visit Website</a></li>
 
               </ul>
             </div>
